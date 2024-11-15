@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solve It! - Math Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-left">Solve It!</div>
+        <div class="nav-right">
+            <button id="loginBtn">Login</button>
+            <button id="registerBtn">Register</button>
+        </div>
+    </nav>
+    <div id="game-container">
+        <h1>Solve It!</h1>
+        <button id="startButton">Play</button>
+        <div id="gameArea" style="display: none;">
+            <div id="problem"></div>
+            <input type="number" id="answer" autocomplete="off">
+            <button id="submitButton" style="display: none;">Submit</button>
+            <div id="result"></div>
+            <div id="timer">Time: 00:00:00</div>
+            <button id="stopButton">Stop Learning</button>
+        </div>
+        <div id="stats" style="display: none;">
+            <h2>Your Results</h2>
+            <div id="progressContainer">
+                <div id="progressBar"></div>
+                <span id="progressPercentage"></span>
+            </div>
+            <p id="totalTime"></p>
+            <p id="totalQuestions"></p>
+            <div id="resultsContainer">
+                <table id="resultsTable">
+                    <thead>
+                        <tr>
+                            <th>Problem</th>
+                            <th>Your Answer</th>
+                            <th>Correct Answer</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div id="actionButtons">
+                <button id="restartButton">Restart</button>
+                <button id="homeButton">Home</button>
+            </div>
+            <div id="countdown" style="display: none;"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

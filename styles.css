@@ -1,0 +1,171 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    z-index: 1000;
+}
+
+.nav-left {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.nav-right button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#game-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#startButton, #stopButton, #submitButton, #restartButton, #homeButton {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#startButton:hover, #stopButton:hover, #submitButton:hover, #restartButton:hover, #homeButton:hover {
+    background-color: #45a049;
+}
+
+#problem {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+#answer {
+    font-size: 18px;
+    padding: 5px;
+    width: 100px;
+}
+
+#result {
+    font-size: 20px;
+    margin: 10px 0;
+    height: 30px;
+}
+
+#timer {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+#progressContainer {
+    width: 100%;
+    background-color: #ddd;
+    margin: 20px 0;
+    position: relative;
+}
+
+#progressBar {
+    width: 0;
+    height: 30px;
+    background-color: #4CAF50;
+    transition: width 0.5s;
+}
+
+#progressPercentage {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    color: black;
+}
+
+#resultsContainer {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 20px;
+}
+
+#resultsTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#resultsTable th, #resultsTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#resultsTable th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#countdown {
+    font-size: 48px;
+    margin: 20px 0;
+}
+
+#actionButtons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    #game-container {
+        width: 95%;
+        padding: 10px;
+    }
+}
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4));
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.5);
+    animation: float 5s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
